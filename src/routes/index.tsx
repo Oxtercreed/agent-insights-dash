@@ -201,12 +201,12 @@ function Dashboard() {
                   <thead>
                     <tr className="text-left text-[11px] font-medium uppercase tracking-wide text-muted-foreground">
                       <th className="px-5 py-2.5 font-medium">Agent</th>
-                      <th className="px-3 py-2.5 font-medium">Model</th>
-                      <th className="px-3 py-2.5 text-right font-medium">Runs</th>
-                      <th className="px-3 py-2.5 text-right font-medium">Tokens</th>
-                      <th className="px-3 py-2.5 text-right font-medium">p50</th>
-                      <th className="px-3 py-2.5 text-right font-medium">Success</th>
-                      <th className="px-3 py-2.5 text-right font-medium">Cost</th>
+                      <th className="px-2 py-2.5 font-medium">Model</th>
+                      <th className="px-2 py-2.5 text-right font-medium">Runs</th>
+                      <th className="px-2 py-2.5 text-right font-medium">Tokens</th>
+                      <th className="px-2 py-2.5 text-right font-medium">p50</th>
+                      <th className="px-2 py-2.5 text-right font-medium">Success</th>
+                      <th className="px-2 py-2.5 text-right font-medium">Cost</th>
                       <th className="w-[104px] px-5 py-2.5 text-right font-medium">14d</th>
                     </tr>
                   </thead>
@@ -226,28 +226,28 @@ function Dashboard() {
                             </div>
                           </div>
                         </td>
-                        <td className="px-3 py-3">
+                        <td className="px-2 py-3">
                           <span className="rounded border border-border whitespace-nowrap bg-surface-raised px-1.5 py-0.5 font-mono text-[11px] text-muted-foreground">
                             {a.model}
                           </span>
                         </td>
-                        <td className="px-3 py-3 text-right nums">{a.runs.toLocaleString()}</td>
-                        <td className="px-3 py-3 text-right nums">
+                        <td className="px-2 py-3 text-right nums">{a.runs.toLocaleString()}</td>
+                        <td className="px-2 py-3 text-right nums">
                           {(a.tokens / 1_000_000).toFixed(1)}M
                         </td>
-                        <td className="px-3 py-3 text-right nums text-muted-foreground">
+                        <td className="px-2 py-3 text-right nums text-muted-foreground">
                           {a.avgLatencyMs < 1000
                             ? `${a.avgLatencyMs}ms`
                             : `${(a.avgLatencyMs / 1000).toFixed(2)}s`}
                         </td>
                         <td
-                          className={`px-3 py-3 text-right nums ${
+                          className={`px-2 py-3 text-right nums ${
                             a.successRate < 95 ? "text-warning" : ""
                           }`}
                         >
                           {a.successRate}%
                         </td>
-                        <td className="px-3 py-3 text-right nums">${a.costUsd.toFixed(2)}</td>
+                        <td className="px-2 py-3 text-right nums">${a.costUsd.toFixed(2)}</td>
                         <td className="w-[104px] px-5 py-3">
                           <Sparkline
                             data={a.trend}
