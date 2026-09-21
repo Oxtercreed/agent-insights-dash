@@ -187,7 +187,8 @@ function Dashboard() {
           </section>
 
           {/* Agents table + activity */}
-          <section className="grid gap-4 xl:grid-cols-[1.9fr_1fr]">
+          <section className="grid gap-4 xl:grid-cols-[2.5fr_1fr]">
+
             <div className="panel overflow-hidden">
               <div className="flex items-center justify-between border-b border-border px-5 py-3.5">
                 <h2 className="text-[14px] font-semibold">Agents</h2>
