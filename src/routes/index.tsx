@@ -187,7 +187,7 @@ function Dashboard() {
           </section>
 
           {/* Agents table + activity */}
-          <section className="grid gap-4 xl:grid-cols-[2.5fr_1fr]">
+          <section className="grid gap-4 xl:grid-cols-[2.2fr_1fr]">
 
             <div className="panel overflow-hidden">
               <div className="flex items-center justify-between border-b border-border px-5 py-3.5">
@@ -207,7 +207,7 @@ function Dashboard() {
                       <th className="px-3 py-2.5 text-right font-medium">p50</th>
                       <th className="px-3 py-2.5 text-right font-medium">Success</th>
                       <th className="px-3 py-2.5 text-right font-medium">Cost</th>
-                      <th className="w-[92px] px-5 py-2.5 text-right font-medium">14d</th>
+                      <th className="w-[104px] px-5 py-2.5 text-right font-medium">14d</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -248,7 +248,7 @@ function Dashboard() {
                           {a.successRate}%
                         </td>
                         <td className="px-3 py-3 text-right nums">${a.costUsd.toFixed(2)}</td>
-                        <td className="w-[92px] px-5 py-3">
+                        <td className="w-[104px] px-5 py-3">
                           <Sparkline
                             data={a.trend}
                             fill={false}
