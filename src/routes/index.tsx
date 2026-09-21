@@ -252,7 +252,7 @@ function Dashboard() {
                           <Sparkline
                             data={a.trend}
                             fill={false}
-                            className="ml-auto h-6 w-16"
+                            className="ml-auto h-6 w-12"
                             stroke={
                               (a.trend.at(-1) ?? 0) >= (a.trend[0] ?? 0)
                                 ? "var(--color-primary)"
