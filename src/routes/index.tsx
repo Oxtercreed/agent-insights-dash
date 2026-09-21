@@ -226,7 +226,7 @@ function Dashboard() {
                           </div>
                         </td>
                         <td className="px-3 py-3">
-                          <span className="rounded border border-border bg-surface-raised px-1.5 py-0.5 font-mono text-[11px] text-muted-foreground">
+                          <span className="rounded border border-border whitespace-nowrap bg-surface-raised px-1.5 py-0.5 font-mono text-[11px] text-muted-foreground">
                             {a.model}
                           </span>
                         </td>
