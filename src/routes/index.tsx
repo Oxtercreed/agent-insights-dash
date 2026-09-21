@@ -206,7 +206,7 @@ function Dashboard() {
                       <th className="px-3 py-2.5 text-right font-medium">p50</th>
                       <th className="px-3 py-2.5 text-right font-medium">Success</th>
                       <th className="px-3 py-2.5 text-right font-medium">Cost</th>
-                      <th className="px-5 py-2.5 text-right font-medium">14d</th>
+                      <th className="w-[92px] px-5 py-2.5 text-right font-medium">14d</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -247,7 +247,7 @@ function Dashboard() {
                           {a.successRate}%
                         </td>
                         <td className="px-3 py-3 text-right nums">${a.costUsd.toFixed(2)}</td>
-                        <td className="px-5 py-3">
+                        <td className="w-[92px] px-5 py-3">
                           <Sparkline
                             data={a.trend}
                             fill={false}
