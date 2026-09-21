@@ -40,6 +40,50 @@ const statusStyles: Record<string, string> = {
   paused: "text-muted-foreground",
 };
 
+function exportCsv() {
+  const headers = [
+    "id",
+    "name",
+    "purpose",
+    "model",
+    "runs",
+    "tokens",
+    "avg_latency_ms",
+    "success_rate",
+    "cost_usd",
+    "status",
+  ];
+  const escape = (v: string | number) => {
+    const s = String(v);
+    return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
+  };
+  const rows = agents.map((a) =>
+    [
+      a.id,
+      a.name,
+      a.purpose,
+      a.model,
+      a.runs,
+      a.tokens,
+      a.avgLatencyMs,
+      a.successRate,
+      a.costUsd.toFixed(2),
+      a.status,
+    ]
+      .map(escape)
+      .join(","),
+  );
+  const csv = [headers.join(","), ...rows].join("\n");
+  const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8;" }));
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = `axon-agent-usage-${new Date().toISOString().slice(0, 10)}.csv`;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+}
+
 function Dashboard() {
   return (
     <div className="flex min-h-screen bg-background">
