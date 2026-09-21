@@ -253,7 +253,7 @@ function Dashboard() {
                             fill={false}
                             className="ml-auto h-6 w-16"
                             stroke={
-                              a.trend[a.trend.length - 1] >= a.trend[0]
+                              (a.trend.at(-1) ?? 0) >= (a.trend[0] ?? 0)
                                 ? "var(--color-primary)"
                                 : "var(--color-destructive)"
                             }
