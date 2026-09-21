@@ -247,7 +247,7 @@ function Dashboard() {
                         >
                           {a.successRate}%
                         </td>
-                        <td className="px-2 py-3 text-right nums">${a.costUsd.toFixed(2)}</td>
+                        <td className="px-2 py-3 text-right nums">${a.costUsd.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
                         <td className="w-[104px] px-5 py-3">
                           <Sparkline
                             data={a.trend}
