@@ -197,7 +197,7 @@ function Dashboard() {
                 </button>
               </div>
               <div className="overflow-x-auto">
-                <table className="w-full min-w-[720px] border-collapse text-[12.5px]">
+                <table className="w-full table-fixed border-collapse text-[12.5px]">
                   <thead>
                     <tr className="text-left text-[11px] font-medium uppercase tracking-wide text-muted-foreground">
                       <th className="px-5 py-2.5 font-medium">Agent</th>
